@@ -1,0 +1,23 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>260</x><y>200</y><w>210</w><h>90</h></coordinates><panel_attributes>PERSONA
+--
+- nombre: string
+- apellido: string
+- sexo: string
+--
++Persona()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>360</y><w>200</w><h>60</h></coordinates><panel_attributes>ESTUDIANTE
+--
+-legajo: int
+--
+/+Estudiante()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>280</y><w>150</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+Extends</panel_attributes><additional_attributes>130;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>360</y><w>200</w><h>80</h></coordinates><panel_attributes>PROFESOR
+--
+-materia: Materia
+-horarios: string
+--
+/+Profesor()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>730</x><y>360</y><w>200</w><h>80</h></coordinates><panel_attributes>MATERIA
+--
+-nombre: string
+-cargHoraria: int
+--
+/+Materia()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>280</y><w>140</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-
+Extends</panel_attributes><additional_attributes>10;10;120;70</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>380</y><w>120</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element></diagram>

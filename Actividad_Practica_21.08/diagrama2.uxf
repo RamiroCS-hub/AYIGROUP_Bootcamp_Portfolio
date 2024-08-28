@@ -1,0 +1,22 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>40</x><y>300</y><w>210</w><h>130</h></coordinates><panel_attributes>CAMION
+--
+- patente: string
+- marca: Marca
+- modelo: Modelo
+- año: int
+- capacidadCarga: Int
+--
++Camion()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>350</y><w>200</w><h>80</h></coordinates><panel_attributes>MATERIA
+--
+-nombre: string
+-cargHoraria: int
+--
+/+Materia()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>370</y><w>120</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>270</y><w>160</w><h>100</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>140;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>240</y><w>210</w><h>70</h></coordinates><panel_attributes>MODELO
+--
+- nombre: string
+--
++Modelo()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>370</y><w>210</w><h>70</h></coordinates><panel_attributes>MARCA
+--
+- nombre: string
+--
++Marca()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>360</y><w>170</w><h>60</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>150;40;10;10</additional_attributes></element></diagram>

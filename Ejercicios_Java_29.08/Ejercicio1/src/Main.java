@@ -7,10 +7,15 @@ import java.util.*;
 
 public class Main {
 
-    final static String NUMBER_FORMAT_EXCEPTION = "Solo puede ingresar numeros";
+    final static String NUMBER_FORMAT_EXCEPTION = "Solo puede ingresar numeros. Ingrese nuevamente";
+    final static String INDEX_OUT_OF_BOUNDS_EXCEPTION = "La cantidad de argumentos no puede ser mayor a:";
 
     public static void main(String[] args) throws IOException {
-        run();
+        try{
+            run();
+        } catch (Exception e){
+            System.out.printf("Ocurrió un error en el programa: %s", e.getMessage());
+        }
     }
 
     private static void run() throws IOException {
@@ -115,6 +120,9 @@ public class Main {
             }
         }catch (NumberFormatException e){
             System.out.println(NUMBER_FORMAT_EXCEPTION);
+            return readArray(arraySize);
+        }catch (IndexOutOfBoundsException e){
+            System.out.printf("%s %d y usted ingreso: %d", INDEX_OUT_OF_BOUNDS_EXCEPTION, arraySize, counter + 1);
             return readArray(arraySize);
         }
         sc.close();

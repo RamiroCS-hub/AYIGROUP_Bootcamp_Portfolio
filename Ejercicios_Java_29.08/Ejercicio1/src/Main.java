@@ -1,10 +1,14 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Method;
 import java.text.BreakIterator;
 import java.util.*;
 
 public class Main {
+
+    final static String NUMBER_FORMAT_EXCEPTION = "Solo puede ingresar numeros";
+
     public static void main(String[] args) throws IOException {
         run();
     }
@@ -34,8 +38,14 @@ public class Main {
     }
 
     private static int readSize() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        return Integer.parseInt(br.readLine());
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            return Integer.parseInt(br.readLine());
+        } catch (NumberFormatException e) {
+            System.out.println(NUMBER_FORMAT_EXCEPTION);
+            readSize();
+        }
+        return 0;
     }
 
     private static Stack<Integer> addEvenToQueue(LinkedList<Integer> numbersList) {
@@ -96,11 +106,16 @@ public class Main {
 
         int start = bi.first();
         int counter = 0;
-        for(int end = start; end != BreakIterator.DONE; start = end, end = bi.next()) {
-            String word = stringNumbers.substring(start, end);
-            if(word.isBlank()) continue;
-            numbers[counter] = Integer.parseInt(word);
-            counter ++;
+        try{
+            for(int end = start; end != BreakIterator.DONE; start = end, end = bi.next()) {
+                String word = stringNumbers.substring(start, end);
+                if(word.isBlank()) continue;
+                numbers[counter] = Integer.parseInt(word);
+                counter ++;
+            }
+        }catch (NumberFormatException e){
+            System.out.println(NUMBER_FORMAT_EXCEPTION);
+            return readArray(arraySize);
         }
         sc.close();
         return numbers;

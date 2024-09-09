@@ -59,7 +59,6 @@ public class Main {
     private static LinkedList<Integer> romanArrayToIntArray(char[] romanNumberArray){
         LinkedList<Integer> intArray = new LinkedList<>();
         for(int i = 0; i < romanNumberArray.length; i++){
-            System.out.println(romanNumberArray[i]);
            switch (romanNumberArray[i]){
                case 'I':
                    intArray.add(1);
